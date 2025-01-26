@@ -17,7 +17,7 @@ const DashboardPage = () => {
             data: [
                 { value: 10, color: 'orange', label: '25M' },
             ],
-            arcLabel: (item: { label: any; }) => `₦${item.label}`,
+            arcLabel: (item: { label: unknown; }) => `₦${item.label}`,
         },
         {
             innerRadius: 60,
