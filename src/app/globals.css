@@ -19,3 +19,219 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+
+
+  background-color: #F0F0F0;
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 1500px;
+  min-height: 100vh;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
+}
+
+.p-datepicker-prev img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.p-datepicker-prev {
+  background-color: transparent;
+  width: 43px;
+  height: 43px;
+}
+
+.p-datepicker-header > button.p-datepicker-prev {
+  background-image: url('/assets/images/arrowLeft.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 13.18px;
+  height: 13.18px;
+  background-color: #FFF;
+  border: none;
+  position: absolute;
+  right: 80px;
+}
+
+.p-datepicker-header > button.p-datepicker-next {
+  background-image: url('/assets/images/arrowRight.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 13.18px;
+  height: 13.18px;
+  background-color: #FFF;
+  border: none;
+}
+
+.p-datepicker-header > button.p-datepicker-prev svg {
+  display: none;
+}
+
+.p-datepicker-header > button.p-datepicker-next svg {
+  display: none;
+}
+
+.p-datepicker-year, .p-datepicker-month {
+  border: none;
+  background-color: #FFF;
+  padding: 0;
+  height: 13.18px;
+  font-size: 22.59px;
+  font-weight: 900;
+  color: #BF0401;
+  line-height: 27.34px;
+}
+
+.p-datepicker-year {
+  position: absolute;
+  left: 140px;
+  top: 15px;
+}
+
+.p-datepicker-month {
+  position: absolute;
+  left: 10px;
+  top: 15px;
+}
+
+.p-datepicker-header > button.p-datepicker-prev:focus,
+.p-datepicker-header > button.p-datepicker-next:focus,
+.p-datepicker-year:focus, 
+.p-datepicker-month:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.p-datepicker-calendar {
+  border-collapse: separate;
+  border-spacing: 0 10px;
+  color: #BF0401;
+}
+
+.p-datepicker-calendar tr td {
+  background-color: white !important;
+  border: 2px solid rgb(223, 221, 221) !important;
+  width: 35px !important;
+  height: 35px !important;
+}
+.p-datepicker-calendar tr td:hover {
+  background-color: #FFA99F
+}
+
+.p-datepicker-calendar tr td:not(:first-child) {
+  border-left: none !important;
+}
+
+.p-datepicker-calendar tr td:hover {
+  background-color: #efa5a3 !important;
+  color: white;
+}
+
+.p-datepicker-calendar tr td span:hover {
+  border: none;
+  background-color: transparent;
+}
+
+.p-datepicker-calendar tr td span {
+  border: none;
+  padding: none;
+}
+
+.p-datepicker-calendar tr td:has(.p-highlight), .p-highlight {
+  background-color: #f6dbdb !important;
+  color: #BF0401;
+}
+.p-datepicker-calendar tr td:has(.p-highlight):hover, .p-datepicker-calendar tr td:has(.p-highlight):hover span {
+  background-color: #efa5a3 !important;
+  color: #BF0401;
+}
+
+.placeholder-big::placeholder {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 16.07px;
+  letter-spacing: -0.57px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
