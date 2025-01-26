@@ -35,6 +35,7 @@ interface ZakatIntroProps {
 }
 
 const nisab = process.env.NISAB ? Number(process.env.NISAB) : 11810080;
+const nisabDate = process.env.NISAB_DATE ? String(process.env.NISAB_DATE) : "26th January 2025";
 
 const ZakatIntro: React.FC<ZakatIntroProps> = ({
     open,
@@ -83,7 +84,7 @@ const ZakatIntro: React.FC<ZakatIntroProps> = ({
                         rules={{ required: "First name is required" }}
                         disabled
                     />
-                    <p className="pb-8">(As at 7th April 2024)</p>
+                    <p className="pb-8">(As at {nisabDate})</p>
                     <RButton onClick={handleNext} halfwidth danger>Get Started</RButton>
                 </div>
             </div>
