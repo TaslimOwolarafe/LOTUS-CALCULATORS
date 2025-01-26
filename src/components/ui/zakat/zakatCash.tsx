@@ -37,6 +37,9 @@ interface ZakatCashProps {
     methods: UseFormReturn;
 }
 
+const nisab = process.env.NISAB ? Number(process.env.NISAB) : 11810080;
+const nisabDate = process.env.NISAB_DATE ? String(process.env.NISAB_DATE) : "26th January 2025";
+
 const ZakatCash: React.FC<ZakatCashProps> = ({
     handleNext,
     handleBack,
@@ -279,11 +282,11 @@ const ZakatCash: React.FC<ZakatCashProps> = ({
                 <RoundedTextField
                     name="nisab"
                     label="Nisab"
-                    placeholder="₦ 5,028,480.00"
+                    placeholder={formatPrice(nisab)}
                     control={methods.control}
                     disabled
                 />
-                <p className="pb-8">(As at 7th April 2024)</p>
+                <p className="pb-8">(As at {nisabDate})</p>
             </div>
 
             <div className="w-[446px]">
