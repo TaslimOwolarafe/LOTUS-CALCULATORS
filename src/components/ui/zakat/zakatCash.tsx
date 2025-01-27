@@ -17,6 +17,9 @@ import Typography from '@mui/material/Typography';
 import ItemCard from "../item";
 import { formatPrice } from "@/utils/formatPrice";
 
+import dotenv from 'dotenv';
+dotenv.config();
+
 const FormAccordion = styled(Accordion)(({ theme }) => ({
     backgroundColor: '#F0F0F0',
     boxShadow: 'none',
